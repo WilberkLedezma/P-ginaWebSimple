@@ -1,0 +1,154 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+
+body{
+    background-color: rgba(0, 0, 0, .9);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header::after{
+    content: "";
+    height: 100vh;
+    width: 100%;
+    display: block;
+    background-image: url(../IMG/header_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+
+.header:hover .header__content{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.header:hover::after{
+      filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.header__content{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    transition: 1000ms;
+}
+
+.title{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: #141414; 
+}
+
+.text{
+    color: #141414; 
+    line-height: 1.7;
+}
+
+.white{
+    color: #fff;
+}
+
+.container{
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+
+.services{
+    padding: 2rem 0;
+}
+
+.icons{
+    font-size: 7rem;
+}
+
+.service p{
+    line-height: 1.7;
+}
+
+.text-center{
+    text-align: center;
+    margin: auto;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.icon{
+    font-size: 9rem;
+}
+
+.bg-light{
+    background-color: #fff;
+    color: #141414;
+}
+
+.footer{
+    padding: 2rem;
+}
+
+.footer{
+    margin: 0;
+}
+
+
+@media screen and (max-width: 560px){
+
+    .header::after{
+        height: 50vh;
+    }
+
+    .header__content{
+        top: 5%;
+        margin-top: 5px;
+    }
+
+    .header__content .logo{
+        height: 100px;
+        width: 100px;
+    }
+
+    .header__content .text{
+        display: none;
+    }
+
+    .grid-3, .grid-2{
+        grid-template-columns: 1fr;
+    }
+
+    .services{
+        padding: 1rem 1rem;
+    }
+
+    @media screen and (max-width: 560px){
+        .header__content .text{
+            display: none;
+        }
+    }
+
+}
